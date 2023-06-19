@@ -22,10 +22,11 @@ public class CarController {
     public Car save(@RequestBody long id,Car car){
         return carService.save(car);
     }
-    @DeleteMapping("{/id}")
+    @DeleteMapping("/{id}")
     public void  delete(@PathVariable long id){
         carService.delete(id);
     }
+    @PutMapping("/{id}")
     public  Car update(@PathVariable long id,@RequestBody Car car){
         return carService.update(id,car);
     }
