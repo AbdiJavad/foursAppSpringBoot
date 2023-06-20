@@ -23,7 +23,7 @@ public class MotorcycleController {
         return motorcycleService.save(motorcycle);
     }
     @DeleteMapping("/{id}")
-    public void delete(@RequestBody long id){
+    public void delete(@PathVariable long id){
         motorcycleService.delete(id);
     }
     @PutMapping("/{id}")
